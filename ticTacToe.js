@@ -12,4 +12,12 @@ class Board {
       this.state = this.state.slice(0, index) + player + this.state.slice(index + 1, this.state.length + 1);
     }
   }
+
+  turn() {
+    if ((this.state.match(/O/g) || []).length > (this.state.match(/X/g) || []).length) {
+      return 'X';
+    } else {
+      return 'O';
+    }
+  }
 }
