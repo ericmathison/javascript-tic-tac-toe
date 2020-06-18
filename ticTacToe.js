@@ -1,6 +1,6 @@
 class Board {
-  constructor() {
-    this.state = '---------';
+  constructor(state = '---------') {
+    this.state = state;
   }
 
   move(index, player) {
