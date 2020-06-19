@@ -32,4 +32,13 @@ class Board {
     }
     return false;
   }
+
+  is_board_filled() {
+    for(let i = 0; i < this.state.length; i++) {
+      if(this.state[i] === '-') {
+        return false;
+      }
+    }
+    return true;
+  }
 }
